@@ -52,6 +52,9 @@ else
   rm -rf "$RELEASE_DIRECTORY"/*
 fi
 
+TAGS=$(git tag --list)
+echo "Tags: ${TAGS}"
+
 # Extract current version.
 CURRENT_VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "0.0.0")
 echo "Current version: ${CURRENT_VERSION}"
