@@ -43,6 +43,8 @@ RELEASE_DIRECTORY="$BUILD_DIRECTORY/releases"
 # Navigate to the working directory.
 cd "${WORK_DIR}"
 
+echo "Working directory: ${WORK_DIR}"
+
 # Create the release directory.
 if [ ! -d "$RELEASE_DIRECTORY" ]; then
   mkdir -p "$RELEASE_DIRECTORY"
