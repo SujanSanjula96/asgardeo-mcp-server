@@ -55,7 +55,7 @@ fi
 TAGS=$(git tag --list)
 echo "Tags: ${TAGS}"
 
-CV=$(git describe --tags --abbrev=0 2>/dev/null)
+CV=$(git describe --tags)
 echo "CV: ${CV}"
 
 # Extract current version.
