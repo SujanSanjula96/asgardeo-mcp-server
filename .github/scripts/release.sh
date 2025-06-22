@@ -59,7 +59,7 @@ CV=$(git describe --tags)
 echo "CV: ${CV}"
 
 # Extract current version.
-CURRENT_VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "0.0.0")
+CURRENT_VERSION=$(git describe --tags --always --abbrev=0 2>/dev/null || echo "0.0.0")
 echo "Current version: ${CURRENT_VERSION}"
 IFS='.' read -r MAJOR MINOR PATCH <<< "${CURRENT_VERSION}"
 
