@@ -28,12 +28,12 @@ jobs:
       GOPROXY: https://proxy.golang.org
     if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           ref: 'main'
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Go 1.x
         uses: actions/setup-go@v3
